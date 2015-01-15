@@ -1306,7 +1306,7 @@ li.comment {
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#0468a3', endColorstr='#5d9cd3', GradientType=1)"
 }
 .featured-content{
-	display: none;
+	/* display: none; */
 }
 .close {
     margin-left: auto;
@@ -1477,3 +1477,40 @@ li.comment {
 	}
 
 }
+.content-here {
+	padding-bottom: 10px;
+	margin-top: -8px;
+	padding-top: 10px;
+}
+.content-description {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /* overflow: hidden; */
+    padding: 6px 0 54px;
+    top: 420px;
+    clear: both;
+}
+.p-content {
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: relative;
+	background-color: #FFF;
+	background-color: rgba(255,255,255,0.95);
+	margin-top: 3px;
+}
+.p-content-wrapper {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* .large-4.columns:nth-child(2):after {
+	content: "Hey";
+	height: 120px;
+	display: block;
+} */

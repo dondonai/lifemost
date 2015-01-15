@@ -60,12 +60,35 @@ function srh_footer() {
 
 // Register widgets
 genesis_register_sidebar( array(
-	'id' => 'home-featured-1',
-	'name' => 'Home Featured 1',
-	'description' => 'Home featured 1 widget'
+	'id' 					=> 'about-us',
+	'name' 				=> 'About Us',
+	'description' => 'About us widget for home.'
 ));
 genesis_register_sidebar( array(
-	'id' => 'home-featured-2',
-	'name' => 'Home Featured 2',
-	'description' => 'Home featured 2 widget'
+	'id' 					=> 'renewable-energy',
+	'name' 				=> 'Solar and Renewable Energy',
+	'description' => 'Solar and Renewable energy widget for home.'
 ));
+genesis_register_sidebar( array(
+	'id' 					=> 'medical-consumables',
+	'name' 				=> 'Medical Consumable',
+	'description' => 'Medical consumables widget for home.'
+));
+genesis_register_sidebar( array(
+	'id' 					=> 'product-sourcing',
+	'name' 				=> 'Product Sourcing and OEM',
+	'description' => 'Product sourcing and OEM widget for home.'
+));
+
+genesis_register_sidebar( array(
+	'id' 					=> 'contact-us',
+	'name' 				=> 'Contact Us',
+	'description' => 'Contact us widget for home.'
+));
+
+genesis_register_sidebar( array(
+	'id' 					=> 'customer-login',
+	'name' 				=> 'Customer\'s Login',
+	'description' => 'Customer\'s login widget for home.'
+));
+

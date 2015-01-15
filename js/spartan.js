@@ -4,55 +4,55 @@ jQuery(document).ready(function($) {
 	
 // 	Closing time
 	$('.close, .featured-thumbnails .columns').on('click', function() {
-		$('.featured-content').fadeOut();
+		$('.featured-content').fadeOut( 'fast' );
 		$('.spacer').remove();
 
 	});
 
 	$('#about-us').on('click', function(target) {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.about-us .featured-content').fadeIn( function() {
+		$('.about-us .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
 		});
 		
 	});
-	$('#renewable-energy').on('click', function(target) {
+	$('#solar').on('click', function(target) {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.renewable-energy .featured-content').fadeIn(function() {
+		$('.solar .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
 		});		
 	});
-	$('#medical-consumables').on('click', function() {
+	$('#medical').on('click', function() {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.medical-consumables .featured-content').fadeIn(function() {
+		$('.medical .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
 		});	
 	});
-	$('#product-sourcing').on('click', function(target) {
+	$('#sourcing').on('click', function(target) {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.product-sourcing .featured-content').fadeIn( function() {
+		$('.sourcing .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
 		});	
 	});
-	$('#contact-us').on('click', function() {
+	$('#contact').on('click', function() {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.contact-us .featured-content').fadeIn( function() {
+		$('.contact .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
 		});	
 	});
-	$('#customer-login').on('click', function() {
+	$('#customer').on('click', function() {
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
-		$('.customer-login .featured-content').fadeIn( function() {
+		$('.customer .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
 			updated_offset();
@@ -67,7 +67,20 @@ jQuery(document).ready(function($) {
 	updated_offset = function() {
 		var spacer = $('.spacer').offset();
 		$('.content-description').css('top', spacer.top + 'px');
+
+		$('html, body').animate({scrollTop: $('.content-description').offset().top }, 'slow');
 	};
 
-	
+	$(document).foundation({
+	  orbit: {
+	    animation: 'fade',
+	    timer_speed: 5000,
+	    slide_number: false,
+	    pause_on_hover: true,
+	    animation_speed: 500,
+	    navigation_arrows: true,
+	    bullets: false
+	  }
+	});
+
 });

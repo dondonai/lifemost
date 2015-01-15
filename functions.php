@@ -22,6 +22,7 @@ function srh_google_fonts() {
 add_action( 'genesis_footer', 'srh_custom_scripts' );
 function srh_custom_scripts() {
 	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), '');
+	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.min.js', array('jquery'), '');
 }
 
 //* Add HTML5 markup structure
@@ -64,31 +65,33 @@ genesis_register_sidebar( array(
 	'name' 				=> 'About Us',
 	'description' => 'About us widget for home.'
 ));
+
 genesis_register_sidebar( array(
-	'id' 					=> 'renewable-energy',
-	'name' 				=> 'Solar and Renewable Energy',
-	'description' => 'Solar and Renewable energy widget for home.'
+	'id' 					=> 'solar',
+	'name' 				=> 'Solar and Reusable Energy',
+	'description' => 'Solar and Reusable Energy widget for home.'
 ));
+
 genesis_register_sidebar( array(
-	'id' 					=> 'medical-consumables',
+	'id' 					=> 'medical',
 	'name' 				=> 'Medical Consumable',
-	'description' => 'Medical consumables widget for home.'
+	'description' => 'Medical Consumable widget for home.'
 ));
+
 genesis_register_sidebar( array(
-	'id' 					=> 'product-sourcing',
+	'id' 					=> 'sourcing',
 	'name' 				=> 'Product Sourcing and OEM',
-	'description' => 'Product sourcing and OEM widget for home.'
+	'description' => 'Product Sourcing and OEM widget for home.'
 ));
 
 genesis_register_sidebar( array(
-	'id' 					=> 'contact-us',
+	'id' 					=> 'contact',
 	'name' 				=> 'Contact Us',
-	'description' => 'Contact us widget for home.'
+	'description' => 'Contact Us widget for home.'
 ));
 
 genesis_register_sidebar( array(
-	'id' 					=> 'customer-login',
+	'id' 					=> 'customer',
 	'name' 				=> 'Customer\'s Login',
-	'description' => 'Customer\'s login widget for home.'
+	'description' => 'Customer\'s Login widget for home.'
 ));
-

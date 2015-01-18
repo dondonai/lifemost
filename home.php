@@ -3,33 +3,64 @@
 // Remove default loop
 remove_action( 'genesis_loop', 'genesis_do_loop' );
 add_action( 'genesis_loop', 'srh_custom_loop' );
-add_action( 'genesis_after_header', 'srh_slider', 1 );
+add_action( 'genesis_after_header', 'srh_slider' );
 
 function srh_slider() {
 	?>
+	<!-- <img src="http://lorempixel.com/1024/768/sports" alt=""> -->
+	<div class="header-gradient"></div>
+	<div class="home-intro">
+		<div class="wrap">
+			<h1 class="entry-title">LifeMost International Company Limited</h1>
+			Choosing the right professionals for your project is important. Lifemost International Company Limited helps our clients establish and maintain a strong business foundation according to their career goals and business needs. We assist businesses and professionals in any industry achieve their maximum potential while guiding them and protecting them along the way. We are deeply committed to establishing a long-term, professional relationship with you looking not just to your current needs, but helping you plan, build and protect your future.
+		</div>
+	</div>
 
-<!-- 	<div class="home-slider">
-		<ul class="fndtn-orbit" data-orbit>
-		  <li>
-		    <img src="http://lorempixel.com/1024/768/people" alt="slide 1" />
-		    <div class="orbit-caption">
-		      Caption One.
+	<div class="home-slider">
+		<ul id="fndtn-orbit" data-orbit 
+		data-options="animation: slide;
+									timer_speed: 10000;
+									slide_number: false;
+									pause_on_hover: false;
+									animation_speed: 500;
+									navigation_arrows: true;
+									next_on_click: false;
+									timer: false;
+									bullets: true;">
+		  <li data-orbit-slide="headline-1">
+		    <div class="orbit-content">
+		    	<div class="row">
+		    		<div class="large-6 columns">
+		    			<h4 class="entry-title">Solar and Reusable Energy</h4>
+		    		</div>
+		    	</div>
 		    </div>
+		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" />
 		  </li>
-		  <li class="active">
-		    <img src="http://lorempixel.com/1024/768/sports" alt="slide 2" />
-		    <div class="orbit-caption">
-		      Caption Two.
+		  <li data-orbit-slide="headline-2">
+		    <div class="orbit-content">
+		    	<div class="row">
+		    		<div>
+		    			<h4 class="entry-title">Medical Consumable</h4>
+		    		</div>
+		    	</div>
 		    </div>
+		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="slide 2" />
+
 		  </li>
-		  <li>
-		    <img src="http://lorempixel.com/1024/768/food" alt="slide 3" />
-		    <div class="orbit-caption">
-		      Caption Three.
+		  <li data-orbit-slide="headline-3">
+		    <div class="orbit-content">
+		    	<div class="row">
+		    		<div>
+		    			<h4 class="entry-title">Product Sourcing and OEM</h4>
+		    		</div>
+		    	</div>
 		    </div>
+		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="slide 3" />
+
 		  </li>
 		</ul>
-	</div> -->
+	</div>
 
 	<?php
 }

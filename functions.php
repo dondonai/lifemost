@@ -11,19 +11,23 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 add_action( 'wp_enqueue_scripts', 'srh_google_fonts' );
 function srh_google_fonts() {
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'normalize-css', get_bloginfo('stylesheet_directory') . '/css/normalize.css', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'foundation-css', get_bloginfo('stylesheet_directory') . '/css/foundation.min.css', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'srh-css', get_bloginfo('stylesheet_directory') . '/css/custom.css', array(), CHILD_THEME_VERSION );
-	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION );
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400,700', array(), CHILD_THEME_VERSION, 'all' );
+	wp_enqueue_style( 'normalize-css', get_bloginfo('stylesheet_directory') . '/css/normalize.css', array(), CHILD_THEME_VERSION, 'all' );
+	wp_enqueue_style( 'foundation-css', get_bloginfo('stylesheet_directory') . '/css/foundation.min.css', array(), CHILD_THEME_VERSION, 'all' );
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION, 'all' );
+	wp_enqueue_style( 'srh-css', get_bloginfo('stylesheet_directory') . '/css/custom.css', array(), CHILD_THEME_VERSION, 'all' );
+
+	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.min.js', array('jquery'), CHILD_THEME_VERSION, true);
+	wp_enqueue_script( 'backstretch-js', get_bloginfo('stylesheet_directory') . '/js/vendor/backstretch.min.js', array('jquery'), CHILD_THEME_VERSION, true);
+	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
+
+	$srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
+	wp_localize_script('custom-js', 'srh_custom', $srh_custom);
 
 }
 
-add_action( 'genesis_footer', 'srh_custom_scripts' );
-function srh_custom_scripts() {
-	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), '');
-	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.min.js', array('jquery'), '');
-}
+// $wnm_custom = array( 'template_url' => get_bloginfo('template_url') );
+//     wp_localize_script( 'custom-js', 'wnm_custom', $wnm_custom );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );
@@ -95,3 +99,5 @@ genesis_register_sidebar( array(
 	'name' 				=> 'Customer\'s Login',
 	'description' => 'Customer\'s Login widget for home.'
 ));
+
+

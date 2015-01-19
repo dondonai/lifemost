@@ -1,7 +1,12 @@
 jQuery(document).ready(function($) {
 	
 	var images = ['Solar-and-Renewable-Energy.jpg', 'Medical-Consumable.jpg', 'Medical-Consumable-1.jpg', 'Product-Sourcing-and-OEM.jpg'];
+	var doc_height = $(document).height();
 	$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)]);
+	$('.images').height(doc_height); // fix for height issue
+	$('.slide-1').backstretch(srh_custom.template_url + '/images/Solar-and-Renewable-Energy.jpg');
+	$('.slide-2').backstretch(srh_custom.template_url + '/images/Medical-Consumable.jpg');
+	$('.slide-3').backstretch(srh_custom.template_url + '/images/Product-Sourcing-and-OEM.jpg');
 	
 	$(document).foundation(); // activate foundation-orbit
 

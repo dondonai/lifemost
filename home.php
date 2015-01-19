@@ -27,7 +27,7 @@ function srh_slider() {
 									next_on_click: false;
 									timer: false;
 									bullets: true;">
-		  <li data-orbit-slide="headline-1">
+		  <li class="slide-list">
 		    <div class="orbit-content">
 		    	<div class="row">
 		    		<div class="large-6 columns">
@@ -35,9 +35,10 @@ function srh_slider() {
 		    		</div>
 		    	</div>
 		    </div>
-		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" />
+		    <div class="images slide-1"></div>
+		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" /> -->
 		  </li>
-		  <li data-orbit-slide="headline-2">
+		  <li class="slide-list">
 		    <div class="orbit-content">
 		    	<div class="row">
 		    		<div>
@@ -45,10 +46,11 @@ function srh_slider() {
 		    		</div>
 		    	</div>
 		    </div>
-		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="slide 2" />
+		    <div class="images slide-2"></div>
+		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="slide 2" /> -->
 
 		  </li>
-		  <li data-orbit-slide="headline-3">
+		  <li class="slide-list">
 		    <div class="orbit-content">
 		    	<div class="row">
 		    		<div>
@@ -56,7 +58,8 @@ function srh_slider() {
 		    		</div>
 		    	</div>
 		    </div>
-		    <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="slide 3" />
+		    <div class="images slide-3"></div>
+		    <!-- // <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="slide 3" /> -->
 
 		  </li>
 		</ul>

@@ -116,7 +116,7 @@ function srh_custom_loop() {
 		<div id="about-us" class="large-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/sports" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/About-Us.jpg" alt="">
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">About us</h4>
@@ -124,15 +124,15 @@ function srh_custom_loop() {
 		</div>
 		<div id="solar" class="large-4 columns">
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/people" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Solar and Reusable Energy</h4>
 		</div>
 		<div id="medical" class="large-4 columns">
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/technics" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="">
 				</div>
-			<h4 class="p-caption">Solar and Reusable Energy</h4>
+			<h4 class="p-caption">Medical Consumable</h4>
 		</div>
 	</div>
 	<!-- Set 2 -->
@@ -140,7 +140,7 @@ function srh_custom_loop() {
 		<div id="sourcing" class="large-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/food" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="">
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">Product Sourcing and OEM</h4>
@@ -148,13 +148,13 @@ function srh_custom_loop() {
 		</div>
 		<div id="contact" class="large-4 columns">
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/business" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/contact-us.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Contact Us</h4>
 		</div>
 		<div id="customer" class="large-4 columns">
 				<div class="thumbnail">
-					<img src="http://lorempixel.com/305/150/transport" alt="">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/customer-login.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Customer's Login</h4>
 		</div>

@@ -299,14 +299,14 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #333;
+	background-color: #008CBA;
 	border: none;
 	color: #fff;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 300;
 	padding: 16px 24px;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	width: auto;
 }
 
@@ -395,7 +395,6 @@ th {
 .site-inner {
 	clear: both;
 	padding: 40px 0;
-	height: 90vh;
 }
 .home .site-inner {
 	height: auto;
@@ -1283,9 +1282,10 @@ li.comment {
 	line-height: 1;
 	padding: 40px 0;
 	text-align: center;
-	position: relative;
-	display: block;
+	/* position: relative; */
+	/* display: block; */
 	z-index:999;
+	height: 95px;
 }
 
 .site-footer p {
@@ -1692,12 +1692,11 @@ li.comment {
     z-index: 1;
     top: 0;
 }
-.orbit-container .orbit-prev>span {
-    border-right-color: #333;
-}
-
+.orbit-container .orbit-prev>span,
 .orbit-container .orbit-next>span {
-    border-left-color: #333;
+	-webkit-filter: drop-shadow( 0 0 5px rgba(51,51,51, .95));
+	-o-filter: drop-shadow( 0 0 5px rgba(51,51,51, .95));
+	filter: drop-shadow( 0 0 5px rgba(51,51,51, .95));
 }
 .nav-primary .sub-menu .current-menu-item > a:hover {
 	color: #333;

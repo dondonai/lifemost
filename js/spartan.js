@@ -1,6 +1,12 @@
 jQuery(document).ready(function($) {
-	console.log('Spartan is ready!');
+	
+	$(document).foundation();
+
 	$('.featured-content').prepend('<div class="close label"><i class="fa fa-times-circle"></i> close</div>');
+
+	// Added the logo beside the home link
+	var home_url = $('.menu-item-home a').attr('href');
+	$('.menu-primary').prepend('<li class="menu-item title-area"><a href="'+ home_url +'"></a></li>');
 	
 	// Closing time
 	$('.close, .featured-thumbnails .columns').on('click', function() {
@@ -70,45 +76,59 @@ jQuery(document).ready(function($) {
 
 	updated_height = function(target) {
 		featured_height = $(target).height();
-		console.log(featured_height);
 		$('.spacer').css('height', featured_height + 'px');
 	};
 
 	updated_offset = function() {
 		var spacer = $('.spacer').offset();
 		$('.content-description').css('top', spacer.top + 'px');
-		$('html, body').animate({scrollTop: $('.content-description').offset().top - nav_height }, 'slow');
+		$('html, body').animate({scrollTop: $('.content-description').offset().top - nav_height }, 100 );
 	};
 
-	var orbit_height = $('.orbit-content').height();
-	$('.orbit-content').css('margin-top', '-' + orbit_height + 'px');
-
-	$(document).foundation();
+	// var orbit_height = $('.orbit-content').height();
+	// $('.orbit-content').css('margin-top', '-' + orbit_height + 'px');
 	
-	nav_height = $('.nav-primary').height();
-	$('.nav-primary').css('top', '-' + nav_height + 5 + 'px');
+	// nav_height = $('.nav-primary').height();
+	// $('.nav-primary').css('top', '-' + nav_height + 5 + 'px');
 	
 	$(window).scroll( function() {
-		window_scroll = $(document).scrollTop();
-		site_header = $('.site-header .title-area').height();
-		the_offset = $('.site-header .title-area').offset().top + site_header;
+		window_scroll = $(this).scrollTop();
+		var site_header = $('.site-header .title-area').height();
+		var the_offset = $('.site-header .title-area').offset().top + site_header;
 		nav_height = $('.nav-primary').height();
-			console.log(site_header);
-		if( window_scroll > the_offset ) {
-			$('.orbit-content, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').fadeOut();
-			$('.nav-primary').addClass('sticky-enabled');
-			$('.nav-primary').css('top', '0');
-		} else {
-			$('.orbit-content, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').fadeIn();
-			$('.nav-primary').css('top', '-' + nav_height + 5 + 'px');
 
+		if( window_scroll > site_header ) {
+			// $('.orbit-content, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').fadeOut();
+			// $('.nav-primary').addClass('sticky-enabled');
+			// $('.nav-primary').css('top', '0');
+			animate_menu_in();
+			// $('.home-slider').css( { '-webkit-filter': 'blur(10px)', '-o-filter': 'blur(10px)', 'filter': 'blur(10px)'} );
+		} else {
+			// $('.orbit-content, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').fadeIn();
+			// $('.nav-primary').css('top', '-' + nav_height + 5 + 'px');
+			animate_menu_out();
+			// $('.home-slider').css( { '-webkit-filter': 'blur(0)', '-o-filter': 'blur(0)', 'filter': 'blur(0)'} );
 		}
 		
 	});
 
-	$('.menu-primary').prepend('<li class="menu-item title-area"><a href="#"></a></li>');
+	animate_menu_in = function() {
+		$('.nav-primary').animate({
+			top: 0,
+			opacity: 1
+		}, 500);
+	}
+
+	animate_menu_out = function() {
+		$('.nav-primary').animate({
+			top: '-' + nav_height + 'px',
+			opacity: 0
+		}, 500);
+	}
+
+
 
 	var images = ['Solar-and-Renewable-Energy.jpg', 'Medical-Consumable.jpg', 'Medical-Consumable-1.jpg', 'Product-Sourcing-and-OEM.jpg'];
-	$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)])
+	$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)]);
 
 });

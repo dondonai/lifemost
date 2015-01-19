@@ -1282,8 +1282,7 @@ li.comment {
 	line-height: 1;
 	padding: 40px 0;
 	text-align: center;
-	/* position: relative; */
-	/* display: block; */
+	position: relative;
 	z-index:999;
 	height: 95px;
 }
@@ -1573,8 +1572,6 @@ li.comment {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
 }
 .orbit-container {
@@ -1595,17 +1592,19 @@ li.comment {
 .orbit-content {
     position: relative;
     margin-top: -220px;
-    top: 350px;
+    top: 400px;
     color: #333;
+    z-index: 999;
 }
 
 .orbit-content .row > div {
-    /* background: rgba(255,255,255, .8); */
     color: #fff;
     padding: 20px;
     width: 550px;
     float: left;
-/*     box-shadow: 0 0 20px 0 #333; */
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 .orbit-content .entry-title {
 	color: #fff;

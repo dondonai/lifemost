@@ -37,77 +37,85 @@ jQuery(document).ready(function($) {
 	$('.featured-content').prepend('<div class="close label"><i class="fa fa-times-circle"></i> close</div>');
 	$('.close, .featured-thumbnails .columns').on('click', function() {
 		$('.featured-content').fadeOut( 'fast' );
-		$('.spacer').remove();
+		$('.spacer, .current-column-arrow').remove();
 	});
 
 	// About us
-	$('#about-us').on('click', function(target) {
+	$('#about-us').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.about-us .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	// Solar and Renewable Energy
-	$('#solar').on('click', function(target) {
+	$('#solar').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.solar .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	// Medical Consumable
-	$('#medical').on('click', function() {
+	$('#medical').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.medical .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	// Product Sourcing and OEM
-	$('#sourcing').on('click', function(target) {
+	$('#sourcing').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.sourcing .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	// Contact Us
-	$('#contact').on('click', function() {
+	$('#contact').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.contact .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	// Customer's Login
-	$('#customer').on('click', function() {
+	$('#customer').on('click', function(nanay, target) {
+		var nanay = $(this);
 		$(this).find('.p-caption').after('<div class="spacer"></div>');
 		$('.customer .featured-content').fadeIn( 'fast', function() {
 			var target = $(this);
 			updated_height(target);
-			updated_offset();
+			updated_offset(nanay);
 		});
 	});
 
 	updated_height = function(target) {
 		featured_height = $(target).height();
 		$('.spacer').css('height', featured_height + 'px');
+		$('.spacer').before('<div class="current-column-arrow"></div>');
 	};
-	updated_offset = function() {
+	updated_offset = function(nanay) {
+		console.log(nanay);
 		var spacer = $('.spacer').offset();
-		$('.content-description').css('top', spacer.top + 'px');
-		$('html, body').animate({scrollTop: $('.content-description').offset().top - nav_height }, 100 );
+		$('.content-description').css('top', spacer.top + 5 + 'px');
+		$('html, body').animate({scrollTop: $(nanay).offset().top - nav_height }, 100 );
 	};
 	animate_menu_in = function() {
 		$('.nav-primary').animate({

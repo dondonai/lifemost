@@ -20,9 +20,11 @@ function srh_google_fonts() {
 	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'foundation-orbit-js', get_bloginfo('stylesheet_directory') . '/js/foundation.orbit.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'backstretch-js', get_bloginfo('stylesheet_directory') . '/js/vendor/backstretch.min.js', array('jquery'), CHILD_THEME_VERSION, true);
-	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
+	// wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
+	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.min.js', array('jquery'), CHILD_THEME_VERSION, true);
 
-	$srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
+	$srh_custom = array( 'template_url' => get_bloginfo('url') );
+	// $srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
 	wp_localize_script('custom-js', 'srh_custom', $srh_custom);
 
 }

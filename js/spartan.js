@@ -2,16 +2,24 @@ jQuery(document).ready(function($) {
 	
 	var images = ['Solar-and-Renewable-Energy-1.jpg', 'Medical-Consumable-1.jpg', 'Product-Sourcing-and-OEM.jpg'];
 	var doc_height = $(document).height();
-	console.log(srh_custom.template_url);
-	$.backstretch(srh_custom.template_url + '/2014/wp-content/uploads/2015/01/' + images[Math.floor(Math.random() * images.length)]);
-	$('.images').height(doc_height); // fix for height issue
-	// $('.slide-1').backstretch(srh_custom.template_url + '/images/Solar-and-Renewable-Energy-1.jpg');
-	// $('.slide-2').backstretch(srh_custom.template_url + '/images/Medical-Consumable-1.jpg');
-	// $('.slide-3').backstretch(srh_custom.template_url + '/images/Product-Sourcing-and-OEM.jpg');
 
-	$('.slide-1').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg');
-	$('.slide-2').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg');
-	$('.slide-3').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg');
+	// Development
+	$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)]);
+
+	// Production
+	// $.backstretch(srh_custom.template_url + '/2014/wp-content/uploads/2015/01/' + images[Math.floor(Math.random() * images.length)]);
+
+	$('.images').height(doc_height); // fix for height issue
+
+	// Development
+	$('.slide-1').backstretch(srh_custom.template_url + '/images/Solar-and-Renewable-Energy-1.jpg');
+	$('.slide-2').backstretch(srh_custom.template_url + '/images/Medical-Consumable-1.jpg');
+	$('.slide-3').backstretch(srh_custom.template_url + '/images/Product-Sourcing-and-OEM.jpg');
+
+	// Production
+	// $('.slide-1').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg');
+	// $('.slide-2').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg');
+	// $('.slide-3').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg');
 	
 	$(this).foundation(); // activate foundation-orbit
 

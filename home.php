@@ -119,8 +119,11 @@ function srh_custom_loop() {
 		<div id="about-us" class="large-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/About-Us.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2013/05/About-Us.jpg" alt="">
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/About-Us.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2013/05/About-Us.jpg" alt=""> -->
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">About us</h4>
@@ -128,15 +131,23 @@ function srh_custom_loop() {
 		</div>
 		<div id="solar" class="large-4 columns">
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy-1.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg" alt="">
+
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy-1.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg" alt=""> -->
 				</div>
 			<h4 class="p-caption">Solar and Reusable Energy</h4>
 		</div>
 		<div id="medical" class="large-4 columns">
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable-1.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg" alt="">
+
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable-1.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg" alt=""> -->
 				</div>
 			<h4 class="p-caption">Medical Consumable</h4>
 		</div>
@@ -146,8 +157,12 @@ function srh_custom_loop() {
 		<div id="sourcing" class="large-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg" alt="">
+
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg" alt=""> -->
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">Product Sourcing and OEM</h4>
@@ -155,15 +170,23 @@ function srh_custom_loop() {
 		</div>
 		<div id="contact" class="large-4 columns">
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/contact-us.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/contact-us.jpg" alt="">
+
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/contact-us.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/contact-us.jpg" alt=""> -->
 				</div>
 			<h4 class="p-caption">Contact Us</h4>
 		</div>
 		<div id="customer" class="large-4 columns">
 				<div class="thumbnail">
-					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/customer-login.jpg" alt=""> -->
-					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/customer-login.jpg" alt="">
+
+					<!-- Development -->
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/customer-login.jpg" alt="">
+
+					<!-- Production -->
+					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/customer-login.jpg" alt=""> -->
 				</div>
 			<h4 class="p-caption">Customer's Login</h4>
 		</div>

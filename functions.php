@@ -15,16 +15,23 @@ function srh_google_fonts() {
 	// wp_enqueue_style( 'normalize-css', get_bloginfo('stylesheet_directory') . '/css/normalize.css', array(), CHILD_THEME_VERSION, 'screen' );
 	// wp_enqueue_style( 'foundation-css', get_bloginfo('stylesheet_directory') . '/css/foundation.min.css', array(), CHILD_THEME_VERSION, 'screen' );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION, 'screen' );
-	// wp_enqueue_style( 'srh-css', get_bloginfo('stylesheet_directory') . '/css/custom.css', array(), CHILD_THEME_VERSION, 'screen' );
+	wp_enqueue_style( 'srh-css', get_bloginfo('stylesheet_directory') . '/css/custom.css', array(), CHILD_THEME_VERSION, 'screen' );
 	
 	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'foundation-orbit-js', get_bloginfo('stylesheet_directory') . '/js/foundation.orbit.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'backstretch-js', get_bloginfo('stylesheet_directory') . '/js/vendor/backstretch.min.js', array('jquery'), CHILD_THEME_VERSION, true);
-	// wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
-	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.min.js', array('jquery'), CHILD_THEME_VERSION, true);
 
-	$srh_custom = array( 'template_url' => get_bloginfo('url') );
-	// $srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
+	// Development
+	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
+
+	// Production
+	// wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.min.js', array('jquery'), CHILD_THEME_VERSION, true);
+
+	// Production
+	// $srh_custom = array( 'template_url' => get_bloginfo('url') );
+
+	// Development
+	$srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
 	wp_localize_script('custom-js', 'srh_custom', $srh_custom);
 
 }

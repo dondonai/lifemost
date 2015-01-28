@@ -7199,7 +7199,7 @@ img.alignright,
   color: #fff;
 }
 .home .site-header {
-  margin-bottom: 300px;
+  margin-bottom: 320px;
 }
 .site-header .wrap {
   padding: 40px 0;
@@ -7244,7 +7244,7 @@ img.alignright,
 }
 
 .header-image .site-title > a {
-  background: url(images/logo.jpg) no-repeat left;
+  background: url(../images/logo.jpg) no-repeat left;
   float: left;
   min-height: 98px;
   width: 100%;
@@ -7453,6 +7453,7 @@ img.alignright,
 .content .entry {
   background: #fff;
   box-shadow: 0 2px 50px 0 rgba(51,51,51, 0.7);
+  padding: 20px;
 }
 
 .featured-content .entry {
@@ -7739,7 +7740,7 @@ li.comment {
 .orbit-container .orbit-prev,
 .orbit-container .orbit-next {
   display: inline-block;
-  top: 30%;
+  top: 25%;
 }
 
 .orbit-content {
@@ -7753,7 +7754,6 @@ li.comment {
 .orbit-content .row > div {
     color: #fff;
     padding: 20px;
-    width: 550px;
     float: left;
     -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
@@ -7768,7 +7768,7 @@ li.comment {
 }
 .orbit-bullets-container {
   position: absolute;
-  top: 30%;
+  top: 25%;
   width: 100%;
 }
 .orbit-bullets li {
@@ -7831,16 +7831,16 @@ li.comment {
   display: none;
 }
 .content-description {
-  margin-top: -8px;
-}
-.content-description {
+  background: rgba(255,255,255, .9);
     width: 100%;
     position: absolute;
     left: 0;
     right: 0;
     z-index: 2;
     overflow: hidden;
-    clear: both;
+    
+
+  opacity: 0;
 }
 .p-content {
   width: 100%;
@@ -7849,7 +7849,6 @@ li.comment {
   top: 0;
   position: relative;
 /*  background-color: #FFF; */
-  background: rgba(255,255,255, .9);
   margin-top: 3px;
 }
 .current-column-arrow {
@@ -7865,7 +7864,7 @@ li.comment {
   width: 20px;
 }
 .p-content-wrapper {
-  width: 960px;
+  /* width: 960px; */
   margin: 0 auto;
   position: relative;
 }
@@ -7886,7 +7885,7 @@ li.comment {
   cursor: pointer;
 }
 .thumbnail {
-  height: 149px;
+  height: 140px;
   width: 100%;
   overflow: hidden;
 }
@@ -7894,6 +7893,7 @@ li.comment {
   -webkit-transition: all 5s ease-in-out;
   -o-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out; 
+  width: 100%;
 }
 .featured-thumbnails .columns:hover > .thumbnail img {
   -webkit-transform: scale(1.4);
@@ -7904,7 +7904,7 @@ li.comment {
 
 /* Sticky Menu  */
 .menu-primary .title-area {
-    background: url(images/logo.jpg) no-repeat left top transparent;
+    background: url(../images/logo.jpg) no-repeat left top transparent;
     background-size: contain;
     margin: 10px 20px 0 0;
     width: 130px;
@@ -7913,6 +7913,9 @@ li.comment {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   box-shadow: 0 1px 30px 0 #333;
+}
+.navicon {
+  display: none;
 }
 
 /* Navigation  */
@@ -8026,7 +8029,7 @@ li.comment {
   .genesis-nav-menu a,
   .genesis-nav-menu > .first > a,
   .genesis-nav-menu > .last > a {
-    padding: 20px 16px;
+    padding: 10px 16px;
   }
 
   .site-header .search-form {
@@ -8089,5 +8092,67 @@ li.comment {
   .sidebar .widget.enews-widget {
     padding: 40px;
   }
+  .thumbnail {
+    height: 250px;
+  }
+  .nav-primary {
+    display: none;
+  }
+  .navicon {
+    background: rgba( 51,51,51, .8);
+    padding: 5px 10px;
+    position: fixed;
+    z-index: 999999;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 3px 10px 2px #333;
+    line-height: 1;
+    display: block;
+}
+  #menu-primary-nav {
+    background: rgba(58, 59, 150, .9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 20px;
+    display: none;
+    overflow: auto;
+  }
 
+  #menu-primary-nav li,
+  .genesis-nav-menu .sub-menu a {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .genesis-nav-menu .sub-menu {
+    position: relative;
+    opacity: 1;
+    width: 100%;
+    left: 0;
+  }
+  .genesis-nav-menu .sub-menu a {
+    font-size: 15px;
+    width: 100%;
+  }
+  .sub-menu:before {
+    left: 50px;
+    font-size: 30px;
+    top: -29px;
+  }
+  .content-description {
+    margin-top: 0;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+  .thumbnail {
+    height: 120px;
+  }
 }

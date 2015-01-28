@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	
-	var images = ['Solar-and-Renewable-Energy-1.jpg', 'Medical-Consumable-1.jpg', 'Product-Sourcing-and-OEM.jpg'];
+	var images = ['solar-energy.jpg', 'medical-packs.jpg', 'oem.jpg'];
 	var doc_height = $(document).height();
 
 	// Development
@@ -12,29 +12,46 @@ jQuery(document).ready(function($) {
 	$('.images').height(doc_height); // fix for height issue
 
 	// Development
-	$('.slide-1').backstretch(srh_custom.template_url + '/images/Solar-and-Renewable-Energy-1.jpg');
-	$('.slide-2').backstretch(srh_custom.template_url + '/images/Medical-Consumable-1.jpg');
-	$('.slide-3').backstretch(srh_custom.template_url + '/images/Product-Sourcing-and-OEM.jpg');
+	$('.slide-1').backstretch(srh_custom.template_url + '/images/solar-energy.jpg');
+	$('.slide-2').backstretch(srh_custom.template_url + '/images/medical-packs.jpg');
+	$('.slide-3').backstretch(srh_custom.template_url + '/images/oem.jpg');
+
+	// $('.slide-1-medium').backstretch(srh_custom.template_url + '/images/slide-1-medium.jpg');
+	// $('.slide-1-small').backstretch(srh_custom.template_url + '/images/slide-1-small.jpg');
 
 	// Production
 	// $('.slide-1').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg');
 	// $('.slide-2').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg');
 	// $('.slide-3').backstretch('http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg');
+
 	
 	$(this).foundation(); // activate foundation-orbit
 
 	var site_header = $('.site-header .title-area').height();
 	var nav_height = $('.nav-primary').height();
 
+	$('.nav-primary').before('<div class="navicon"><i class="fa fa-navicon"></i></div>');
+	$('.navicon').on('click', function() {
+		$('#menu-primary-nav').fadeToggle();
+	});
+
 	$(document).scroll( function() {
 		
 		var window_scroll = $(window).scrollTop();
 
 		if( window_scroll > site_header ) {
-			$('.orbit-content .columns, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '0');
+			$('.orbit-content .column, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '0');
+
+			if( !$('.orbit-timer').hasClass('paused') ) {
+				$('.orbit-timer').click();
+			}
 			animate_menu_in();
 		} else {
-			$('.orbit-content .columns, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '1');
+			$('.orbit-content .column, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '1');
+
+			if( $('.orbit-timer').hasClass('paused') ) {
+				$('.orbit-timer').click();
+			}
 			animate_menu_out();
 		}
 		
@@ -49,6 +66,7 @@ jQuery(document).ready(function($) {
 	$('.close, .featured-thumbnails .columns').on('click', function() {
 		$('.featured-content').fadeOut( 'fast' );
 		$('.spacer, .current-column-arrow').remove();
+		$('.content-description').css('opacity', '0');
 	});
 
 	// About us
@@ -125,7 +143,8 @@ jQuery(document).ready(function($) {
 	updated_offset = function(nanay) {
 		console.log(nanay);
 		var spacer = $('.spacer').offset();
-		$('.content-description').css('top', spacer.top + 5 + 'px');
+		$('.content-description').css({'top': spacer.top + 'px', 'opacity': '1'});
+// 		$('.content-description').css('opacity', '1');
 		$('body').animate({scrollTop: $(nanay).offset().top - nav_height }, 100 );
 	};
 	animate_menu_in = function() {

@@ -19,46 +19,61 @@ function srh_slider() {
 	<div class="home-slider">
 		<ul id="fndtn-orbit" data-orbit 
 		data-options="animation: slide;
-									timer_speed: 10000;
+									timer_speed: 5000;
 									slide_number: false;
 									pause_on_hover: false;
+									resume_on_mouseout: false;
 									animation_speed: 500;
 									navigation_arrows: true;
 									next_on_click: false;
-									timer: false;
+									timer: true;
 									bullets: true;">
 		  <li class="slide-list">
-		    <div class="orbit-content">
-		    	<div class="row">
-		    		<div class="large-6 columns">
-		    			<h4 class="entry-title">Solar and Reusable Energy</h4>
-		    		</div>
-		    	</div>
+		  	<div class="wrap row">
+			    <div class="orbit-content large-12 column">
+			    	<div class="row">
+			    		<div class="large-6 column">
+			    			<h4 class="entry-title">Solar and Renewable Energy</h4>
+			    		</div>
+			    	</div>
+			    </div>		  		
+		  	</div>
+		    <div class="show-for-large-up images slide-1"></div>
+		    <div class="show-for-medium-only images slide-1-medium">
+		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-1-medium.jpg" alt="slide 1" />
 		    </div>
-		    <div class="images slide-1"></div>
+		    <div class="show-for-small-only images slide-1-small"></div>
 		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" /> -->
 		  </li>
 		  <li class="slide-list">
 		    <div class="orbit-content">
 		    	<div class="row">
-		    		<div>
+		    		<div class="large-6 column">
 		    			<h4 class="entry-title">Medical Consumable</h4>
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="images slide-2"></div>
+		    <div class="show-for-large-up images slide-2"></div>
+		    <div class="show-for-medium-only images slide-2-medium">
+		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-2-medium.jpg" alt="slide 2" />
+		    </div>
+		    <div class="show-for-small-only images slide-2-small"></div>
 		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="slide 2" /> -->
 
 		  </li>
 		  <li class="slide-list">
 		    <div class="orbit-content">
 		    	<div class="row">
-		    		<div>
+		    		<div class="large-6 column">
 		    			<h4 class="entry-title">Product Sourcing and OEM</h4>
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="images slide-3"></div>
+		    <div class="show-for-large-up images slide-3"></div>
+		    <div class="show-for-medium-only images slide-3-medium">
+		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-3-medium.jpg" alt="slide 3" />
+		    </div>
+		    <div class="show-for-small-only images slide-3-small"></div>
 		    <!-- // <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="slide 3" /> -->
 
 		  </li>
@@ -73,8 +88,8 @@ function srh_custom_loop() {
 ?>
 
 	<div class="content-description">
-		<div class="p-content">
-			<div class="p-content-wrapper">
+		<div class="p-content row">
+			<div class="p-content-wrapper large-12 columns">
  			
 				<?php
 
@@ -120,10 +135,10 @@ function srh_custom_loop() {
 			<!-- <div> -->
 				<div class="thumbnail">
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/About-Us.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/About-Us.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2013/05/About-Us.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2013/05/About-Us.jpg" alt="">
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">About us</h4>
@@ -133,21 +148,21 @@ function srh_custom_loop() {
 				<div class="thumbnail">
 
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy-1.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy-1.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Solar-and-Renewable-Energy-1.jpg" alt="">
 				</div>
-			<h4 class="p-caption">Solar and Reusable Energy</h4>
+			<h4 class="p-caption">Solar and Renewable Energy</h4>
 		</div>
 		<div id="medical" class="large-4 columns">
 				<div class="thumbnail">
 
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable-1.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable-1.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Medical-Consumable-1.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Medical Consumable</h4>
 		</div>
@@ -159,10 +174,10 @@ function srh_custom_loop() {
 				<div class="thumbnail">
 
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/Product-Sourcing-and-OEM.jpg" alt="">
 				</div>
 				<!-- <img src="http://lorempixel.com/305/150/sports" alt=""> -->
 				<h4 class="p-caption">Product Sourcing and OEM</h4>
@@ -172,10 +187,10 @@ function srh_custom_loop() {
 				<div class="thumbnail">
 
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/contact-us.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/contact-us.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/contact-us.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/contact-us.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Contact Us</h4>
 		</div>
@@ -183,10 +198,10 @@ function srh_custom_loop() {
 				<div class="thumbnail">
 
 					<!-- Development -->
-					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/customer-login.jpg" alt="">
+					<!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/customer-login.jpg" alt=""> -->
 
 					<!-- Production -->
-					<!-- <img src="http://lifemost.co/2014/wp-content/uploads/2015/01/customer-login.jpg" alt=""> -->
+					<img src="http://lifemost.co/2014/wp-content/uploads/2015/01/customer-login.jpg" alt="">
 				</div>
 			<h4 class="p-caption">Customer's Login</h4>
 		</div>

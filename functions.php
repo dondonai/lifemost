@@ -12,14 +12,18 @@ add_action( 'wp_enqueue_scripts', 'srh_google_fonts' );
 function srh_google_fonts() {
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:400,700', array(), CHILD_THEME_VERSION, 'screen' );
-	// wp_enqueue_style( 'normalize-css', get_bloginfo('stylesheet_directory') . '/css/normalize.css', array(), CHILD_THEME_VERSION, 'screen' );
-	// wp_enqueue_style( 'foundation-css', get_bloginfo('stylesheet_directory') . '/css/foundation.min.css', array(), CHILD_THEME_VERSION, 'screen' );
 	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css', array(), CHILD_THEME_VERSION, 'screen' );
+
+	// Development
+	wp_enqueue_style( 'normalize-css', get_bloginfo('stylesheet_directory') . '/css/normalize.css', array(), CHILD_THEME_VERSION, 'screen' );
+	wp_enqueue_style( 'foundation-css', get_bloginfo('stylesheet_directory') . '/css/foundation.min.css', array(), CHILD_THEME_VERSION, 'screen' );
 	wp_enqueue_style( 'srh-css', get_bloginfo('stylesheet_directory') . '/css/custom.css', array(), CHILD_THEME_VERSION, 'screen' );
 	
 	wp_enqueue_script( 'foundation-js', get_bloginfo('stylesheet_directory') . '/js/foundation.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'foundation-orbit-js', get_bloginfo('stylesheet_directory') . '/js/foundation.orbit.js', array('jquery'), CHILD_THEME_VERSION, true);
 	wp_enqueue_script( 'backstretch-js', get_bloginfo('stylesheet_directory') . '/js/vendor/backstretch.min.js', array('jquery'), CHILD_THEME_VERSION, true);
+	wp_enqueue_script( 'modernizr-js', get_bloginfo('stylesheet_directory') . '/js/vendor/modernizr.js', array(), '2.8.3', true);
+	wp_enqueue_script( 'fastclick-js', get_bloginfo('stylesheet_directory') . '/js/vendor/fastclick.js', array(), '1.0.3', true);
 
 	// Development
 	wp_enqueue_script( 'custom-js', get_bloginfo('stylesheet_directory') . '/js/spartan.js', array('jquery'), CHILD_THEME_VERSION, true);
@@ -32,12 +36,10 @@ function srh_google_fonts() {
 
 	// Development
 	$srh_custom = array( 'template_url' => get_bloginfo('stylesheet_directory') );
+
 	wp_localize_script('custom-js', 'srh_custom', $srh_custom);
 
 }
-
-// $wnm_custom = array( 'template_url' => get_bloginfo('template_url') );
-//     wp_localize_script( 'custom-js', 'wnm_custom', $wnm_custom );
 
 //* Add HTML5 markup structure
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list' ) );

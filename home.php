@@ -39,44 +39,49 @@ function srh_slider() {
 			    </div>		  		
 		  	</div>
 		    <div class="show-for-large-up images slide-1"></div>
-		    <div class="show-for-medium-only images slide-1-medium">
+		    <div class="show-for-small-up images slide-1-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-1-medium.jpg" alt="slide 1" />
 		    </div>
 		    <div class="show-for-small-only images slide-1-small"></div>
 		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" /> -->
 		  </li>
+
 		  <li class="slide-list">
-		    <div class="orbit-content">
-		    	<div class="row">
-		    		<div class="large-6 column">
-		    			<h4 class="entry-title">Medical Consumable</h4>
-		    		</div>
-		    	</div>
-		    </div>
+		  	<div class="wrap row">
+			    <div class="orbit-content large-12 column">
+			    	<div class="row">
+			    		<div class="large-6 column">
+			    			<h4 class="entry-title">Medical Consumable</h4>
+			    		</div>
+			    	</div>
+			    </div>		  		
+		  	</div>
 		    <div class="show-for-large-up images slide-2"></div>
-		    <div class="show-for-medium-only images slide-2-medium">
+		    <div class="show-for-small-up images slide-2-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-2-medium.jpg" alt="slide 2" />
 		    </div>
-		    <div class="show-for-small-only images slide-2-small"></div>
-		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Medical-Consumable.jpg" alt="slide 2" /> -->
-
+		    <!-- <div class="show-for-small-only images slide-2-small"></div> -->
+		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 2" /> -->
 		  </li>
+
 		  <li class="slide-list">
-		    <div class="orbit-content">
-		    	<div class="row">
-		    		<div class="large-6 column">
-		    			<h4 class="entry-title">Product Sourcing and OEM</h4>
-		    		</div>
-		    	</div>
-		    </div>
+		  	<div class="wrap row">
+			    <div class="orbit-content large-12 column">
+			    	<div class="row">
+			    		<div class="large-6 column">
+			    			<h4 class="entry-title">Product Sourcing and OEM</h4>
+			    		</div>
+			    	</div>
+			    </div>		  		
+		  	</div>
 		    <div class="show-for-large-up images slide-3"></div>
-		    <div class="show-for-medium-only images slide-3-medium">
+		    <div class="show-for-small-up images slide-3-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-3-medium.jpg" alt="slide 3" />
 		    </div>
-		    <div class="show-for-small-only images slide-3-small"></div>
-		    <!-- // <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Product-Sourcing-and-OEM.jpg" alt="slide 3" /> -->
-
+		    <!-- <div class="show-for-small-only images slide-3-small"></div> -->
+		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 3" /> -->
 		  </li>
+		  
 		</ul>
 	</div>
 

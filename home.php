@@ -32,17 +32,17 @@ function srh_slider() {
 		  	<div class="wrap row">
 			    <div class="orbit-content large-12 column">
 			    	<div class="row">
-			    		<div class="large-6 column">
+			    		<div class="large-12 column">
 			    			<h4 class="entry-title">Solar and Renewable Energy</h4>
 			    		</div>
 			    	</div>
 			    </div>		  		
 		  	</div>
-		    <div class="show-for-large-up images slide-1"></div>
-		    <div class="show-for-small-up images slide-1-medium">
+		    <div class="show-for-medium-up images slide-1"></div>
+		    <div class="show-for-small-only images slide-1-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-1-medium.jpg" alt="slide 1" />
 		    </div>
-		    <div class="show-for-small-only images slide-1-small"></div>
+		    <!-- <div class="show-for-small-only images slide-1-small"></div> -->
 		    <!-- <img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/Solar-and-Renewable-Energy.jpg" alt="slide 1" /> -->
 		  </li>
 
@@ -50,14 +50,14 @@ function srh_slider() {
 		  	<div class="wrap row">
 			    <div class="orbit-content large-12 column">
 			    	<div class="row">
-			    		<div class="large-6 column">
+			    		<div class="large-12 column">
 			    			<h4 class="entry-title">Medical Consumable</h4>
 			    		</div>
 			    	</div>
 			    </div>		  		
 		  	</div>
-		    <div class="show-for-large-up images slide-2"></div>
-		    <div class="show-for-small-up images slide-2-medium">
+		    <div class="show-for-medium-up images slide-2"></div>
+		    <div class="show-for-small-only images slide-2-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-2-medium.jpg" alt="slide 2" />
 		    </div>
 		    <!-- <div class="show-for-small-only images slide-2-small"></div> -->
@@ -68,14 +68,14 @@ function srh_slider() {
 		  	<div class="wrap row">
 			    <div class="orbit-content large-12 column">
 			    	<div class="row">
-			    		<div class="large-6 column">
+			    		<div class="large-12 column">
 			    			<h4 class="entry-title">Product Sourcing and OEM</h4>
 			    		</div>
 			    	</div>
 			    </div>		  		
 		  	</div>
-		    <div class="show-for-large-up images slide-3"></div>
-		    <div class="show-for-small-up images slide-3-medium">
+		    <div class="show-for-medium-up images slide-3"></div>
+		    <div class="show-for-small-only images slide-3-medium">
 		    	<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/slide-3-medium.jpg" alt="slide 3" />
 		    </div>
 		    <!-- <div class="show-for-small-only images slide-3-small"></div> -->
@@ -136,7 +136,7 @@ function srh_custom_loop() {
 
 	<!-- Set 1 -->
 	<div class="featured-thumbnails row first-set">
-		<div id="about-us" class="large-4 columns">
+		<div id="about-us" class="medium-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
 					<!-- Development -->
@@ -149,7 +149,7 @@ function srh_custom_loop() {
 				<h4 class="p-caption">About us</h4>
 			<!-- </div> -->
 		</div>
-		<div id="solar" class="large-4 columns">
+		<div id="solar" class="medium-4 columns">
 				<div class="thumbnail">
 
 					<!-- Development -->
@@ -160,7 +160,7 @@ function srh_custom_loop() {
 				</div>
 			<h4 class="p-caption">Solar and Renewable Energy</h4>
 		</div>
-		<div id="medical" class="large-4 columns">
+		<div id="medical" class="medium-4 columns">
 				<div class="thumbnail">
 
 					<!-- Development -->
@@ -174,7 +174,7 @@ function srh_custom_loop() {
 	</div>
 	<!-- Set 2 -->
 	<div class="featured-thumbnails row secont-set">
-		<div id="sourcing" class="large-4 columns">
+		<div id="sourcing" class="medium-4 columns">
 			<!-- <div> -->
 				<div class="thumbnail">
 
@@ -188,7 +188,7 @@ function srh_custom_loop() {
 				<h4 class="p-caption">Product Sourcing and OEM</h4>
 			<!-- </div> -->
 		</div>
-		<div id="contact" class="large-4 columns">
+		<div id="contact" class="medium-4 columns">
 				<div class="thumbnail">
 
 					<!-- Development -->
@@ -199,7 +199,7 @@ function srh_custom_loop() {
 				</div>
 			<h4 class="p-caption">Contact Us</h4>
 		</div>
-		<div id="customer" class="large-4 columns">
+		<div id="customer" class="medium-4 columns">
 				<div class="thumbnail">
 
 					<!-- Development -->

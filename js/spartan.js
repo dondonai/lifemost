@@ -3,8 +3,11 @@ jQuery(document).ready(function($) {
 	var images = ['solar-energy.jpg', 'medical-packs.jpg', 'oem.jpg'];
 	var doc_height = $(document).height();
 
+	var current_url = window.location.protocol + "//" + window.location.host + "/";
 	// Development
-	$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)]);
+	// if( !current_url ) {
+		$.backstretch(srh_custom.template_url + '/images/' + images[Math.floor(Math.random() * images.length)]);
+	// }
 
 	// Production
 	// $.backstretch(srh_custom.template_url + '/2014/wp-content/uploads/2015/01/' + images[Math.floor(Math.random() * images.length)]);
@@ -40,14 +43,14 @@ jQuery(document).ready(function($) {
 		var window_scroll = $(window).scrollTop();
 
 		if( window_scroll > site_header ) {
-			$('.orbit-content .column, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '0');
+			$('.home .orbit-content .column, .home .orbit-container .orbit-prev, .home .orbit-container .orbit-next, .home .orbit-bullets').css('opacity', '0');
 
 			if( !$('.orbit-timer').hasClass('paused') ) {
 				$('.orbit-timer').click();
 			}
 			animate_menu_in();
 		} else {
-			$('.orbit-content .column, .orbit-container .orbit-prev, .orbit-container .orbit-next, .orbit-bullets').css('opacity', '1');
+			$('.home .orbit-content .column, .home .orbit-container .orbit-prev, .home .orbit-container .orbit-next, .home .orbit-bullets').css('opacity', '1');
 
 			if( $('.orbit-timer').hasClass('paused') ) {
 				$('.orbit-timer').click();

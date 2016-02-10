@@ -147,7 +147,7 @@ jQuery(document).ready(function($) {
 		console.log(nanay);
 		var spacer = $('.spacer').offset();
 		$('.content-description').css({'top': spacer.top + 'px', 'opacity': '1'});
-// 		$('.content-description').css('opacity', '1');
+		// $('.content-description').css('opacity', '1');
 		$('body').animate({scrollTop: $(nanay).offset().top - nav_height }, 100 );
 	};
 	animate_menu_in = function() {
